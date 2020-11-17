@@ -24,8 +24,8 @@ public class App extends Application {
 		configuracion += "background.blue=255\n";
 		configuracion += "size.width=420\n";
 		configuracion += "size.height=200\n";
-		configuracion += "lcoation.x=300\n";
-		configuracion += "lcoation.y=200\n";
+		configuracion += "location.x=300\n";
+		configuracion += "location.y=200";
 		
 		
 		bWriter.write(configuracion);
@@ -37,9 +37,13 @@ public class App extends Application {
 		
 		String ruta = System.getProperty("user.home");
 		Properties pro = new Properties();
-		File ficherito = new File(ruta + "\\Desktop\\GitHub\\Ventana-Memoria\\ventana.config");
+		File ficherito = new File(ruta + "\\.Ventana-Memoria\\ventana.config");
 		
-		Inicio(ficherito);
+		if(!ficherito.getParentFile().exists() && !ficherito.getParentFile().mkdirs())
+			throw new IllegalStateException("No se puede crear la carpeta :(");
+		
+		if(ficherito.createNewFile())
+		   Inicio(ficherito);
 		
 		pro.load(new FileInputStream(ficherito));
 		controller = new MemoriaController(pro);
@@ -64,7 +68,7 @@ public class App extends Application {
 		
 		String ruta = System.getProperty("user.home");
 		Properties pro = new Properties();
-		File ficherito = new File(ruta + "\\Desktop\\GitHub\\Ventana-Memoria\\ventana.config");
+		File ficherito = new File(ruta + "\\.Ventana-Memoria\\ventana.config");
 		MemoriaModel model = controller.getModel();
 		
 		pro.setProperty("background.red", String.valueOf(model.getRed()));
@@ -72,8 +76,8 @@ public class App extends Application {
 		pro.setProperty("background.blue", String.valueOf(model.getBlue()));
 		pro.setProperty("size.width", String.valueOf(model.getAnchura()));
 		pro.setProperty("size.height", String.valueOf(model.getAltura()));
-		pro.setProperty("lcoation.x", String.valueOf(model.getLocationX()));
-		pro.setProperty("lcoation.y", String.valueOf(model.getLocationY()));
+		pro.setProperty("location.x", String.valueOf(model.getLocationX()));
+		pro.setProperty("location.y", String.valueOf(model.getLocationY()));
 		
 		pro.store(new FileWriter(ficherito), null);
 		

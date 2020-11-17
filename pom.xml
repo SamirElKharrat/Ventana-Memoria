@@ -3,4 +3,27 @@
   <groupId>dad.ventana.memoria</groupId>
   <artifactId>Ventana-Memoria</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+                  	<properties>
+		<maven.compiler.target>14</maven.compiler.target>
+		<maven.compiler.source>14</maven.compiler.source>
+		<exec.mainClass>dad.ventana.memoria.main.Main</exec.mainClass>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>14.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>14.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hildan.fxgson</groupId>
+			<artifactId>fx-gson</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		</dependencies>
 </project>

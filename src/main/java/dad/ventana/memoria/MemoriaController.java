@@ -60,12 +60,12 @@ public class MemoriaController implements Initializable {
 		green.valueProperty().addListener(e -> onSliderCambiarValor(e));
 		blue.valueProperty().addListener(e -> onSliderCambiarValor(e));
 		
-		view.setStyle("-fx-background-coloer; rgb(" + model.getRed() + "," + model.getGreen() + "," + model.getBlue() + ");");
+		view.setStyle("-fx-background-color: rgb(" + model.getRed() + "," + model.getGreen() + "," + model.getBlue() + ");");
 		
 	}
 	
 	public void onSliderCambiarValor(Observable e) {
-		view.setStyle("-fx-background-coloer; rgb(" + model.getRed() + "," + model.getGreen() + "," + model.getBlue() + ");");
+		view.setStyle("-fx-background-color: rgb(" + model.getRed() + "," + model.getGreen() + "," + model.getBlue() + ");");
 	}
 	
 	public void ListenerStage(Stage primaryStage) {
