@@ -34,7 +34,7 @@ public class MemoriaController implements Initializable {
 		loader.load();
 		
 	}
-	
+
 	@FXML
 	private VBox view;
 	
