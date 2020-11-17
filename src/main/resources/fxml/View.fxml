@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <Label text="Red">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Slider fx:id="red" blockIncrement="1.0" majorTickUnit="255.0" max="255.0" minorTickCount="0" prefHeight="19.0" prefWidth="193.0">
+               <padding>
+                  <Insets left="20.0" top="5.0" />
+               </padding>
+            </Slider>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="46.0" text="Green">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Slider fx:id="green" blockIncrement="1.0" max="255.0" prefHeight="19.0" prefWidth="176.0">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </Slider>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <Label text="Blue">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Slider fx:id="blue" blockIncrement="1.0" max="255.0" prefHeight="19.0" prefWidth="193.0">
+               <padding>
+                  <Insets left="20.0" top="5.0" />
+               </padding>
+            </Slider>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
