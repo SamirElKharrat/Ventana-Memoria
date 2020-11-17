@@ -44,7 +44,7 @@ public class App extends Application {
 		pro.load(new FileInputStream(ficherito));
 		controller = new MemoriaController(pro);
 		
-		
+
 	}
 	
 	@Override
